@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -6,21 +8,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace GIS_Viewer_CSharp {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// MapFieldWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window {
-
-        public MainWindow() {
+    public partial class MapFieldWindow : Window {
+        public MapFieldWindow() {
             InitializeComponent();
-            DataContext = new MainViewModel();
-            MapFieldWindow mapFieldWindow = new MapFieldWindow();
-            mapFieldWindow.Show();
         }
-
     }
 }
