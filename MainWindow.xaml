@@ -10,10 +10,11 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -27,5 +28,14 @@
                 
             </MenuItem>
         </Menu>
+
+        <Image Source="{Binding ImageFileName}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"></Image>
+
+        <Button Grid.Column="1" Grid.Row="1" Content="作成" Command="{Binding CreateImageButton}"></Button>
+        <ScrollViewer Background="Azure" Grid.Column="1" Grid.Row="2">
+            <StackPanel Name="DataPanel">
+                
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

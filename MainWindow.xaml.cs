@@ -17,9 +17,7 @@ namespace GIS_Viewer_CSharp {
 
         public MainWindow() {
             InitializeComponent();
-            DataContext = new MainViewModel();
-            MapFieldWindow mapFieldWindow = new MapFieldWindow();
-            mapFieldWindow.Show();
+            DataContext = new MainViewModel(this);
         }
 
     }
